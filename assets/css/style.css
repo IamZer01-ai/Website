@@ -1,3 +1,320 @@
-:root { color-scheme: light; --bg: #f7f8fa; --surface: #fff; --surface-2: #eef1f4; --text: #18222d; --muted: #62707e; --line: #dce2e8; --accent: #176b87; --accent-dark: #0e4c61; --focus: #e1a730; --shadow: 0 12px 32px rgba(24,34,45,.08); --radius: 10px; --max: 1160px; }
-:root[data-theme='dark'] { color-scheme: dark; --bg: #10171d; --surface: #17222b; --surface-2: #21303b; --text: #e8eef2; --muted: #a8b5bf; --line: #33434f; --accent: #67bfd2; --accent-dark: #9adbe7; --shadow: 0 12px 32px rgba(0,0,0,.2); }
-* { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; background: var(--bg); color: var(--text); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.65; } a { color: var(--accent); } a:hover { color: var(--accent-dark); } :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; } img { max-width: 100%; } h1,h2,h3 { line-height: 1.15; margin: 0 0 1rem; letter-spacing: 0; } h1 { font-size: clamp(2.7rem, 7vw, 5rem); max-width: 760px; } h2 { font-size: clamp(2rem, 4vw, 3rem); } h3 { font-size: 1.35rem; } p { margin: 0 0 1rem; } .container { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; } .section { padding: 5rem 0; } .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; } .section-heading p { color: var(--muted); max-width: 520px; } .muted { color: var(--muted); font-size: .96rem; } .eyebrow { color: var(--accent); font: 700 .76rem/1.2 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; } .skip-link { position: absolute; left: 1rem; top: -3rem; background: var(--surface); padding: .5rem 1rem; z-index: 10; } .skip-link:focus { top: 1rem; }
+/* ==========================================================================
+   1. CSS VARIABLES & THEME
+   ========================================================================== */
+:root {
+  /* Dark Theme Palette (Default for Cybersec) */
+  --bg-color: #0a0f18; /* Deep dark blue/black */
+  --surface-color: #111827; /* Slightly lighter for cards */
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-color: #00d4ff; /* Electric Cyan */
+  --accent-hover: #00a3cc;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+  
+  /* Spacing & Layout */
+  --container-width: 1100px;
+  --section-spacing: 6rem;
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   2. BASE & RESET
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 2.5rem); }
+
+/* The "eyebrow" text is great for technical context */
+.eyebrow {
+  font-family: var(--font-mono);
+  color: var(--accent-color);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.text-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   4. LAYOUT & CONTAINERS
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--section-spacing) 0;
+}
+
+/* ==========================================================================
+   5. NAVIGATION (HEADER)
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 15, 24, 0.85); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+.brand-mark {
+  color: var(--accent-color);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--accent-color);
+}
+
+/* Hide mobile menu button by default on desktop */
+.menu-button { display: none; }
+.icon-button { background: none; border: none; color: var(--text-main); cursor: pointer; }
+
+/* ==========================================================================
+   6. HERO SECTION
+   ========================================================================== */
+.hero {
+  padding: 8rem 0 4rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  /* Animation */
+  animation: fadeUp 1s ease-out forwards; 
+}
+
+.hero p[data-site-description] {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   7. BUTTONS & ACTIONS
+   ========================================================================== */
+.button-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border: 1px solid var(--accent-color);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.button-secondary:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+.social-links a {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+/* ==========================================================================
+   8. SECTIONS & GRIDS
+   ========================================================================== */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Styling for Grids */
+.skill-grid > div, .project-grid > div, .info-grid > div {
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition);
+}
+
+.skill-grid > div:hover, .project-grid > div:hover, .info-grid > div:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   10. ANIMATIONS
+   ========================================================================== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll animation class to be triggered by JS (optional) */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   11. RESPONSIVE DESIGN (MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-links { display: none; /* Add JS to toggle mobile menu */ }
+  .menu-button { display: block; background: none; border: none; color: #fff; }
+  .info-grid { grid-template-columns: 1fr; }
+  .section-heading { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .button-row { flex-direction: column; }
+  .button { width: 100%; text-align: center; }
+  .footer-inner { flex-direction: column; text-align: center; gap: 1rem; }
+}
