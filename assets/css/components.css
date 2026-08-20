@@ -163,7 +163,6 @@
     /* 5. Space before the Projects section begins */
     margin-bottom: 4rem; 
 }
-}
 /* --- Grids & Cards --- */
 .grid { display: grid; gap: 1.5rem; } 
 .project-grid { grid-template-columns: repeat(3, 1fr); } 
