@@ -33,7 +33,7 @@
 .nav-logo {
   width: 35px;
   height: 35px;
-  border-radius: 50%; /* Change to 50% if you want a circular logo */
+  border-radius: 50%; /* Makes the logo circular */
   object-fit: cover;
   border: 1px solid var(--accent);
 }
@@ -81,7 +81,7 @@
   align-items: center;
   text-align: center; 
   
-  /* NEW: Background Image with a smart overlay */
+  /* Background Image with a smart overlay */
   background-image: 
     linear-gradient(color-mix(in srgb, var(--bg) 75%, transparent), var(--bg)), 
     url('../images/hero-bg.jpg');
@@ -98,7 +98,7 @@
   max-width: 650px; 
   color: var(--muted); 
   font-size: 1.15rem; 
-  /* NEW: Centers the paragraph block so it doesn't float to the left */
+  /* Centers the paragraph block so it doesn't float to the left */
   margin: 0 auto 1.5rem auto; 
 } 
 
@@ -106,7 +106,7 @@
   margin-bottom: 1rem; 
 } 
 
-/* NEW: Centers the buttons (View Projects & Contact Me) */
+/* Centers the buttons (View Projects & Contact Me) */
 .hero .button-row {
   justify-content: center;
 }
@@ -114,6 +114,7 @@
 /* Page Hero stays the same for your internal pages */
 .page-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--line); } 
 .page-hero p { color: var(--muted); max-width: 650px; }
+
 /* --- Buttons --- */
 .button-row, .card-actions { 
   display: flex; 
@@ -141,33 +142,27 @@
 .button-secondary { background: transparent; color: var(--text) !important; border-color: var(--line); } 
 .button-secondary:hover { border-color: var(--accent); } 
 .text-link { font-weight: 600; font-size: 0.9rem; }
-.skills-bg-section {
-    /* 1. Background image with a dark, semi-transparent overlay */
-    background-image: linear-gradient(
-        rgba(10, 15, 25, 0.85), /* Dark blue/black tint at the top */
-        rgba(10, 15, 25, 0.95)  /* Slightly darker at the bottom */
-    ), url('../images/cyber-pic.jpg');
-    
-    /* 2. Make it cover the whole section */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    /* 3. Add padding so your cards don't touch the edge of the background */
-    padding: 3rem 2rem;
-    
-    /* 4. Optional: Match your theme's borders */
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    
-    /* 5. Space before the Projects section begins */
-    margin-bottom: 4rem; 
-}
+
 /* --- Grids & Cards --- */
 .grid { display: grid; gap: 1.5rem; } 
 .project-grid { grid-template-columns: repeat(3, 1fr); } 
-.skill-grid { grid-template-columns: repeat(4, 1fr); } 
 .info-grid { grid-template-columns: repeat(3, 1fr); } 
+
+/* Skills Grid with Background Image */
+.skill-grid { 
+  grid-template-columns: repeat(4, 1fr); 
+  
+  /* Background map image with dark overlay */
+  background-image: linear-gradient(rgba(10, 15, 25, 0.7), rgba(10, 15, 25, 0.7)), url('../images/cyber-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Spacing and borders */
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+} 
 
 .project-card, .skill-group, .info-card { 
   background: var(--surface); 
@@ -220,6 +215,7 @@
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0; font-size: 0.9rem; } 
 .footer-inner { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); } 
 .social-links { display: flex; gap: 1.5rem; font-family: var(--font-mono); font-size: 0.85rem; }
+
 /* ==========================================================================
    CUSTOM ANIMATED CURSOR
    ========================================================================== */

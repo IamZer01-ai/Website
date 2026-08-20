@@ -38,6 +38,9 @@
   /* Stack all grids into a single column */
   .project-grid, .skill-grid, .info-grid { grid-template-columns: 1fr; } 
   
+  /* Reduces the map background padding slightly so mobile cards aren't squished */
+  .skill-grid { padding: 1rem; } 
+  
   .footer-inner { display: block; text-align: center; } 
   .footer-inner > * { margin-bottom: 1rem; display: block; } 
   .social-links { justify-content: center; }
