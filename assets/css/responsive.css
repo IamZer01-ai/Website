@@ -1,3 +1,50 @@
-@media (max-width: 900px) { .project-grid, .info-grid { grid-template-columns: repeat(2, 1fr); } .skill-grid { grid-template-columns: repeat(2, 1fr); } .nav-links { display: none; position: absolute; left: 0; right: 0; top: 72px; padding: 1rem 1.25rem 1.5rem; background: var(--surface); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; } .nav-links.is-open { display: flex; } .menu-button { display: block; } }
-@media (max-width: 560px) { body { font-size: 16px; } .container { width: min(var(--max), calc(100% - 1.5rem)); } .section { padding: 3.5rem 0; } .hero { padding: 5rem 0 4rem; } .section-heading { display: block; } .project-grid, .skill-grid, .info-grid { grid-template-columns: 1fr; } .footer-inner, .contact-detail { display: block; } .footer-inner > * { margin-bottom: .75rem; } .contact-detail span, .contact-detail a { display: block; } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* --- TABLETS & SMALL LAPTOPS (Under 900px) --- */
+@media (max-width: 900px) { 
+  .project-grid, .info-grid { grid-template-columns: repeat(2, 1fr); } 
+  .skill-grid { grid-template-columns: repeat(2, 1fr); } 
+  
+  /* Mobile Menu Setup */
+  .nav-links { 
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 72px; 
+    padding: 1.5rem; 
+    background: var(--surface); 
+    border-bottom: 1px solid var(--line); 
+    flex-direction: column; 
+    align-items: flex-start; 
+    box-shadow: var(--shadow);
+  } 
+  
+  .nav-links.is-open { display: flex; } 
+  .menu-button { display: block; } 
+}
+
+/* --- MOBILE PHONES (Under 560px) --- */
+@media (max-width: 560px) { 
+  body { font-size: 16px; } 
+  .container { width: min(var(--max), calc(100% - 1.5rem)); } 
+  .section { padding: 4rem 0; } 
+  .hero { padding: 5rem 0 4rem; } 
+  
+  .section-heading { display: block; } 
+  
+  /* Stack all grids into a single column */
+  .project-grid, .skill-grid, .info-grid { grid-template-columns: 1fr; } 
+  
+  .footer-inner { display: block; text-align: center; } 
+  .footer-inner > * { margin-bottom: 1rem; display: block; } 
+  .social-links { justify-content: center; }
+}
+
+/* --- ACCESSIBILITY --- */
+@media (prefers-reduced-motion: reduce) { 
+  html { scroll-behavior: auto; } 
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } 
+}
