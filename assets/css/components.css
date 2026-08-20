@@ -141,26 +141,28 @@
 .button-secondary { background: transparent; color: var(--text) !important; border-color: var(--line); } 
 .button-secondary:hover { border-color: var(--accent); } 
 .text-link { font-weight: 600; font-size: 0.9rem; }
-.cyber-dashboard-banner {
-    /* 1. Point to your image */
-    background-image: url('../images/cyber-pic.jpg'); 
+.skills-bg-section {
+    /* 1. Background image with a dark, semi-transparent overlay */
+    background-image: linear-gradient(
+        rgba(10, 15, 25, 0.85), /* Dark blue/black tint at the top */
+        rgba(10, 15, 25, 0.95)  /* Slightly darker at the bottom */
+    ), url('../images/cyber-pic.jpg');
     
-    /* 2. Make it perfectly fit the surrounding container */
+    /* 2. Make it cover the whole section */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
-    /* 3. Define the size of the banner */
-    width: 100%;
-    min-height: 300px; /* Adjust this number to make the banner taller or shorter */
+    /* 3. Add padding so your cards don't touch the edge of the background */
+    padding: 3rem 2rem;
     
-    /* 4. Match your theme's dark mode styling */
-    border-radius: var(--radius); 
-    border: 1px solid var(--line); 
-    box-shadow: var(--shadow);
+    /* 4. Optional: Match your theme's borders */
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
     
-    /* Spacing below the banner */
-    margin-bottom: 2rem;
+    /* 5. Space before the Projects section begins */
+    margin-bottom: 4rem; 
+}
 }
 /* --- Grids & Cards --- */
 .grid { display: grid; gap: 1.5rem; } 
