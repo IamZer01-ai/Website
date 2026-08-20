@@ -61,16 +61,39 @@
 
 /* --- Hero Sections --- */
 .hero { 
-  padding: 8rem 0 6rem; 
+  padding: 2rem 0; /* Reduced padding because we are using min-height instead */
   border-bottom: 1px solid var(--line); 
   background: linear-gradient(110deg, var(--bg), var(--surface-2)); 
+  
+  /* NEW: These lines push everything to the exact middle of the screen */
+  min-height: 85vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
 } 
-.hero p { max-width: 650px; color: var(--muted); font-size: 1.15rem; } 
-.hero-kicker { margin-bottom: 1rem; } 
 
+.hero p { 
+  max-width: 650px; 
+  color: var(--muted); 
+  font-size: 1.15rem; 
+  /* NEW: Centers the paragraph block so it doesn't float to the left */
+  margin: 0 auto 1.5rem auto; 
+} 
+
+.hero-kicker { 
+  margin-bottom: 1rem; 
+} 
+
+/* NEW: Centers the buttons (View Projects & Contact Me) */
+.hero .button-row {
+  justify-content: center;
+}
+
+/* Page Hero stays the same for your internal pages */
 .page-hero { padding: 5rem 0 3rem; border-bottom: 1px solid var(--line); } 
-.page-hero p { color: var(--muted); max-width: 650px; } 
-
+.page-hero p { color: var(--muted); max-width: 650px; }
 /* --- Buttons --- */
 .button-row, .card-actions { 
   display: flex; 
