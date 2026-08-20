@@ -21,11 +21,22 @@
 } 
 
 .brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; /* Space between logo and name */
   color: var(--text); 
   font-weight: 700; 
   font-size: 1.35rem; 
   font-family: var(--font-mono);
 } 
+
+.nav-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px; /* Change to 50% if you want a circular logo */
+  object-fit: cover;
+  border: 1px solid var(--accent);
+}
 .brand-mark { color: var(--accent); } 
 
 .nav-links { 
@@ -60,19 +71,25 @@
 .menu-button { display: none; }
 
 /* --- Hero Sections --- */
+/* --- Hero Sections --- */
 .hero { 
-  padding: 2rem 0; /* Reduced padding because we are using min-height instead */
+  padding: 2rem 0; 
   border-bottom: 1px solid var(--line); 
-  background: linear-gradient(110deg, var(--bg), var(--surface-2)); 
-  
-  /* NEW: These lines push everything to the exact middle of the screen */
   min-height: 85vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center; 
-} 
+  
+  /* NEW: Background Image with a smart overlay */
+  background-image: 
+    linear-gradient(color-mix(in srgb, var(--bg) 75%, transparent), var(--bg)), 
+    url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .hero h1 {
   margin: 0 auto 1rem auto; /* Centers the name and profession on the desktop*/
