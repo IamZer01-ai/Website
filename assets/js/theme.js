@@ -1,57 +1,32 @@
-/**
-
-
-
-THEME TOGGLE SCRIPT
-
-Handles switching between Light and Dark modes and saves preference.
-
-*/
-
-(() => {
-
-const key = 'jai-portfolio-theme';
-
-const root = document.documentElement;
-
-const button = document.querySelector('[data-theme-toggle]');
-
-// Check local storage or system preference
-
-const stored = localStorage.getItem(key);
-
-const preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-function apply(theme) {
-
-root.dataset.theme = theme;
-
-localStorage.setItem(key, theme);
-
-
-
-if (button) {
-
-const next = theme === 'dark' ? 'light' : 'dark';
-
-button.setAttribute('aria-label', `Switch to ${next} theme`);
-
-button.innerHTML = theme === 'dark' ? '☼ <span>Light</span>' : '◐ <span>Dark</span>';
-
-}
-
-}
-
-// Apply on load
-
-apply(preferred);
-
-// Listen for clicks on the toggle button
-
-button?.addEventListener('click', () => {
-
-apply(root.dataset.theme === 'dark' ? 'light' : 'dark');
-
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+    const themeSpan = themeToggleBtn ? themeToggleBtn.querySelector('span') : null;
+    
+    // Check local storage for saved theme, or fallback to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial theme
+    let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    applyTheme(currentTheme);
+    
+    // Listen for button clicks
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(currentTheme);
+        });
+    }
+    
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeSpan) themeSpan.textContent = 'Light'; // Change text to Light when in Dark mode
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if (themeSpan) themeSpan.textContent = 'Dark';  // Change text to Dark when in Light mode
+        }
+        // Save user preference
+        localStorage.setItem('theme', theme);
+    }
 });
-
-})(); 
