@@ -10,18 +10,18 @@
   // Check local storage or system preference
   const stored = localStorage.getItem(key);
   const preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
+  
   function apply(theme) {
     root.dataset.theme = theme;
     localStorage.setItem(key, theme);
-    
+
     if (button) {
       const next = theme === 'dark' ? 'light' : 'dark';
       button.setAttribute('aria-label', `Switch to ${next} theme`);
       button.innerHTML = theme === 'dark' ? '☼ <span>Light</span>' : '◐ <span>Dark</span>';
     }
   }
-
+  
   // Apply on load
   apply(preferred);
   
