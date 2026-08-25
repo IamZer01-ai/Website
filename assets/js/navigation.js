@@ -6,9 +6,9 @@
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-mobile-menu]');
   
-  const close = () => { 
-    menu?.classList.remove('is-open'); 
-    toggle?.setAttribute('aria-expanded', 'false'); 
+  const close = () => {
+    menu?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
   };
   
   // Toggle menu on button click
@@ -23,7 +23,7 @@
   });
   
   // Close menu when the Escape key is pressed (Accessibility)
-  document.addEventListener('keydown', event => { 
-    if (event.key === 'Escape') close(); 
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') close();
   });
 })();
