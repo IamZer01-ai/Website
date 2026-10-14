@@ -1,94 +1,39 @@
-/**
- * PORTFOLIO DATA
- * All your personal information, skills, and projects live here.
- */
+/* Portfolio content lives here so page templates stay simple. */
 window.portfolioData = {
   site: {
     name: 'Jai',
-    role: 'Cybersecurity Engineer',
-    description: 'I work across cybersecurity, ethical hacking, security research, Linux, Python, and practical security tooling.',
-    email: 'your.email@example.com', // Add your email
-    github: 'https://github.com/yourusername', // Add your GitHub
-    linkedin: 'https://linkedin.com/in/yourusername', // Add your LinkedIn
-    location: 'India', // Add your location if you want
-    siteUrl: '',
-    resumePath: 'assets/resume/Jai-Resume.pdf'
+    role: 'Cybersecurity Professional',
+    description: 'I am a cybersecurity graduate interested in security monitoring, web security, digital forensics, and practical security tooling.',
+    email: '',
+    github: 'https://github.com/IamZer01-ai',
+    linkedin: 'https://www.linkedin.com/in/sai-jayanth-b3a48322/',
+    location: 'Hyderabad, India',
+    siteUrl: 'https://iamzer01-ai.github.io/Website/',
+    resumePath: ''
   },
   about: {
-    intro: 'I am Jai, a cybersecurity-focused technologist interested in understanding how systems fail and how to make them stronger.',
-    interests: ['Ethical hacking', 'Security research', 'Linux systems', 'Open source security tooling'],
-    builds: 'I build practical tools, repeatable workflows, and clear documentation that turn security ideas into useful outcomes.',
-    learning: 'Currently learning: Active Directory exploitation and advanced reverse engineering.',
-    goals: 'Career goals: To join a dynamic Red Team or become an elite Security Researcher.'
+    intro: 'I am a Computer Science and Cybersecurity graduate interested in understanding how systems fail and how to make them more resilient.',
+    interests: ['Web security', 'Vulnerability assessment', 'Digital forensics', 'Security monitoring', 'Open-source tooling'],
+    builds: 'I value repeatable workflows, practical tools, and clear technical documentation.',
+    learning: 'Currently building skills through authorized labs and practical projects.',
+    goals: 'To contribute to security operations, vulnerability assessment, and responsible security research.'
   },
   skills: {
-    'Cybersecurity': [
-      ['Ethical Hacking', 'Working Knowledge'], 
-      ['Web Security', 'Working Knowledge'], 
-      ['Network Security', 'Familiar'],
-      ['Vulnerability Assessment', 'Working Knowledge'], 
-      ['Bug Bounty', 'Learning'], 
-      ['Security Research', 'Learning']
-    ],
-    'Programming': [
-      ['Python', 'Working Knowledge'], 
-      ['JavaScript', 'Working Knowledge'], 
-      ['HTML/CSS', 'Working Knowledge'],
-      ['Bash', 'Familiar']
-    ],
-    'Security Tools': [
-      ['Nmap', 'Working Knowledge'], 
-      ['Burp Suite', 'Familiar'], 
-      ['Metasploit', 'Learning'],
-      ['Hydra', 'Learning'], 
-      ['John the Ripper', 'Learning'], 
-      ['WhatWeb', 'Familiar'],
-      ['Subfinder / Amass', 'Learning']
-    ],
-    'Platforms': [
-      ['Linux', 'Working Knowledge'], 
-      ['Kali Linux', 'Familiar'], 
-      ['GitHub', 'Working Knowledge'], 
-      ['Docker', 'Learning']
-    ]
+    'Security fundamentals': [['Web security', 'Developing'], ['Network traffic analysis', 'Developing'], ['Vulnerability assessment', 'Developing'], ['Digital forensics', 'Exposure']],
+    'Programming & systems': [['Python', 'Working knowledge'], ['SQL', 'Foundational'], ['Linux', 'Working knowledge'], ['HTML / CSS / JavaScript', 'Foundational']],
+    'Security tools': [['Wireshark', 'Practice'], ['Nmap', 'Practice'], ['Burp Suite', 'Practice'], ['Autopsy / FTK', 'Exposure']],
+    'Workflow': [['Technical documentation', 'Working knowledge'], ['Incident investigation', 'Exposure'], ['Git & GitHub', 'Working knowledge'], ['Responsible disclosure', 'Learning']]
   },
   projects: [
-    { 
-      name: 'VehicleInfo.sh', 
-      description: 'Indian Vehicle Intelligence CLI.', 
-      concept: 'A command-line cybersecurity and intelligence-oriented project involving vehicle information, offline intelligence, online providers, VIN intelligence, vehicle OSINT, validation, and export functionality.', 
-      technologies: ['Bash', 'OSINT', 'CLI'], 
-      status: 'In development', 
-      github: '#', 
-      demo: '#' 
-    },
-    { 
-      name: 'IamZer01 Sentinel', 
-      description: 'Personal SOC dashboard for security monitoring, threat detection, and infrastructure visibility.', 
-      concept: 'A monitoring stack involving Docker, Grafana, Prometheus, Elasticsearch, and Kibana.', 
-      technologies: ['Docker', 'Grafana', 'Prometheus', 'ELK'], 
-      status: 'In development', 
-      github: '#', 
-      demo: '#' 
-    },
-    { 
-      name: 'Bug Bounty Toolkit', 
-      description: 'A cybersecurity toolkit and workflow for reconnaissance, vulnerability identification, categorization, and report generation.', 
-      concept: 'A focused workspace for making repeatable bug bounty research easier to organize and communicate.', 
-      technologies: ['Python', 'Bash', 'Reconnaissance'], 
-      status: 'Planned', 
-      github: '#', 
-      demo: '#' 
-    }
+    { name: 'VehicleInfo', description: 'A command-line project for organizing vehicle information and provider-based lookups.', concept: 'A modular CLI project focused on validation, provider separation, and useful output formats.', technologies: ['Python', 'CLI', 'Data validation'], status: 'In development', github: 'https://github.com/IamZer01-ai/Vehicle-info', demo: '' },
+    { name: 'IamZer01 Sentinel', description: 'A planned personal security monitoring dashboard.', concept: 'Exploring metrics, dashboards, and event visibility with a documented local lab setup.', technologies: ['Grafana', 'Prometheus', 'Python'], status: 'Planned', github: '', demo: '' },
+    { name: 'Bug Bounty Toolkit', description: 'A workspace for organizing authorized web security testing.', concept: 'A planned collection of repeatable checklists, finding categories, and report templates for in-scope targets.', technologies: ['Python', 'Web security', 'Documentation'], status: 'In development', github: 'https://github.com/IamZer01-ai/Bounty-01', demo: '' }
   ],
   certifications: [],
   education: [
-    { 
-      degree: 'BTech in Computer Science and Engineering (Cybersecurity)', 
-      institution: 'Your University Name', 
-      date: '2020 - 2024', 
-      details: 'Focused on network security and cryptography.' 
-    }
+    { degree: 'B.Tech in Computer Science and Engineering (Cybersecurity)', institution: 'Pallavi Engineering College', date: '2021–2025', details: 'CGPA: 7.2/10' },
+    { degree: 'Class XII — Telangana State Board', institution: 'Telangana State Board', date: '', details: '68%' },
+    { degree: 'Class X — SSC', institution: 'Telangana SSC Board', date: '', details: '82%' }
   ],
   labs: [],
   blog: []
