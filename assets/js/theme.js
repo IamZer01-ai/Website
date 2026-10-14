@@ -1,32 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.querySelector('[data-theme-toggle]');
-    const themeSpan = themeToggleBtn ? themeToggleBtn.querySelector('span') : null;
-    
-    // Check local storage for saved theme, or fallback to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Set initial theme
-    let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-    applyTheme(currentTheme);
-    
-    // Listen for button clicks
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            applyTheme(currentTheme);
-        });
-    }
-    
-    function applyTheme(theme) {
-        if (theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            if (themeSpan) themeSpan.textContent = 'Light'; // Change text to Light when in Dark mode
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-            if (themeSpan) themeSpan.textContent = 'Dark';  // Change text to Dark when in Light mode
-        }
-        // Save user preference
-        localStorage.setItem('theme', theme);
-    }
-});
+(() => {
+  const init = () => {
+    const button = document.querySelector('[data-theme-toggle]');
+    if (!button) return;
+    const label = button.querySelector('[data-theme-label]');
+    let saved = '';
+    try { saved = localStorage.getItem('portfolio-theme') || ''; } catch (_) {}
+    const preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const apply = theme => {
+      document.documentElement.setAttribute('data-theme', theme);
+      button.setAttribute('aria-pressed', String(theme === 'light'));
+      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      if (label) label.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+      try { localStorage.setItem('portfolio-theme', theme); } catch (_) {}
+    };
+    apply(saved === 'light' || saved === 'dark' ? saved : preferred);
+    button.addEventListener('click', () => apply(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
