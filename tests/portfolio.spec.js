@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test('homepage renders project and skill content', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle(/Jai \\| Cybersecurity Portfolio/);
+  await expect(page).toHaveTitle(/Jai \| Cybersecurity Portfolio/);
   await expect(page.locator('[data-featured-projects] .project-card')).toHaveCount(3);
   await expect(page.locator('[data-skills] .skill-group')).toHaveCount(4);
   await expect(page.getByRole('link', { name: /Explore projects/ })).toHaveAttribute('href', 'projects.html');
@@ -31,7 +31,7 @@ test('mobile menu opens and closes accessibly', async ({ page }) => {
   await expect(toggle).toHaveAttribute('aria-expanded', 'true');
   await expect(menu).toBeVisible();
   await page.getByRole('link', { name: 'Projects', exact: true }).click();
-  await expect(page).toHaveURL(/projects\\.html$/);
+  await expect(page).toHaveURL(/\/projects\.html$/);
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
 
