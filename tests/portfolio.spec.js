@@ -64,7 +64,9 @@ test('optional sections show clear empty states rather than blank panels', async
 test('projects page renders selected public repository cards and links', async ({ page }) => {
   await page.goto('/projects.html');
   const repositories = page.locator('[data-repositories] .project-card');
-  await expect(repositories).toHaveCount(5);
+  await expect(repositories).toHaveCount(8);
   await expect(repositories.filter({ hasText: 'IamZer01 Sentinel' })).toHaveCount(1);
   await expect(repositories.filter({ hasText: 'Ethical Hacking Learning Lab' }).getByRole('link', { name: /View repository/ })).toHaveAttribute('href', 'https://github.com/IamZer01-ai/Ethical-Hacking-Lab');
+  await expect(repositories.filter({ hasText: 'Defensive Blue Team Portfolio' })).toHaveCount(1);
+  await expect(repositories.filter({ hasText: 'Concept / architecture planning' })).toHaveCount(1);
 });
