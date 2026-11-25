@@ -25,6 +25,9 @@
     document.querySelectorAll("[data-site-full-name]").forEach(el => el.textContent = site.fullName || site.name || "");
     document.querySelectorAll("[data-site-role]").forEach(el => el.textContent = site.role || "");
     document.querySelectorAll("[data-site-description]").forEach(el => el.textContent = site.description || "");
+    document.querySelectorAll("[data-about-intro]").forEach(el => el.textContent = data.about?.intro || "");
+    document.querySelectorAll("[data-about-summary]").forEach(el => el.textContent = data.about?.summary || "");
+    document.querySelectorAll("[data-about-interests]").forEach(el => el.innerHTML = (data.about?.interests || []).map(item => "<li>" + escapeHTML(item) + "</li>").join(""));
     document.querySelectorAll("[data-site-email]").forEach(el => {
       const email = text(site.email).trim();
       if (email) { el.textContent = email; el.href = "mailto:" + email; } else el.closest(".contact-detail")?.remove();
