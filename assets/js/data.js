@@ -174,6 +174,44 @@ window.portfolioData = {
       url: "https://github.com/IamZer01-ai/Network-Engineering-Notes"
     },
     {
+      name: "Defensive Blue Team Portfolio",
+      category: "Defensive security engineering",
+      description: "A defensive-security repository organized around SOC operations, detection engineering, threat hunting, incident response, digital forensics, threat intelligence, and reproducible synthetic-data labs.",
+      highlights: [
+        "Documents alert triage, event normalization, severity classification, analyst workflows, and incident reporting.",
+        "Organizes detection examples, threat-hunting hypotheses, ATT&CK mappings, and response playbooks.",
+        "Includes synthetic-data lab scenarios and describes CLI workflows for log analysis, IOC extraction, rule validation, and reporting."
+      ],
+      technologies: ["Python", "Sigma", "YARA", "MITRE ATT&CK", "pytest", "Ruff"],
+      status: "Defensive portfolio repository",
+      url: "https://github.com/IamZer01-ai/Defensive-blueteam"
+    },
+    {
+      name: "Cyber-Levelup",
+      category: "Cybersecurity learning platform concept",
+      description: "An architecture and product-planning repository for a gamified cybersecurity learning platform, combining a learning academy, practice labs, progression, quests, achievements, and an AI mentor concept.",
+      highlights: [
+        "Proposes a modular web application, API backend, terminal and challenge engines, and shared packages.",
+        "Outlines learning paths, lab categories, progression mechanics, and future mobile support.",
+        "Currently documented as a proposed architecture and roadmap, not a completed or deployed platform."
+      ],
+      technologies: ["Next.js (planned)", "NestJS (planned)", "React Native (future)", "PostgreSQL (planned)"],
+      status: "Concept / architecture planning",
+      url: "https://github.com/IamZer01-ai/Cyber-levelup"
+    },
+    {
+      name: "Home Network Scanner",
+      category: "Network visibility project",
+      description: "A web application described as helping users discover and monitor devices on their own home network or networks they are authorized to manage.",
+      highlights: [
+        "The repository README currently provides only a short project description; implementation details and supported discovery methods need fuller documentation.",
+        "Presented here as a project overview, not as a verified production-ready scanner."
+      ],
+      technologies: ["Network discovery", "Device inventory", "Web application"],
+      status: "Documentation needs expansion",
+      url: "https://github.com/IamZer01-ai/Home-Network-Scanner"
+    },
+    {
       name: "HACKer RoadMAPS",
       category: "Curated learning roadmap",
       description: "A cybersecurity learning map that organizes foundations, networking and Linux, SOC and blue-team concepts, ethical VAPT, digital forensics, secure development, and career preparation into progressive tracks.",
