@@ -5,7 +5,7 @@ test('homepage renders profile, six skill groups, and three projects', async ({ 
   await expect(page).toHaveTitle(/Sai Jayanth \| Cybersecurity Portfolio/);
   await expect(page.locator('[data-featured-projects] .project-card')).toHaveCount(3);
   await expect(page.locator('[data-skills] .skill-group')).toHaveCount(6);
-  await expect(page.getByRole('link', { name: /View experience/ })).toHaveAttribute('href', 'experience.html');
+  await expect(page.getByRole('link', { name: 'View experience', exact: true })).toHaveAttribute('href', 'experience.html');
 });
 
 test('experience and education pages render their timeline entries', async ({ page }) => {
