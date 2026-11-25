@@ -200,6 +200,19 @@ window.portfolioData = {
       url: "https://github.com/IamZer01-ai/Cyber-levelup"
     },
     {
+      name: "Vehicle-info",
+      category: "Vehicle registration lookup",
+      description: "A vehicle-information lookup project intended to accept a registration plate number and retrieve vehicle-related registration details from an authorized data source. The exact fields and data provider should be documented; private owner contact details and home addresses are not exposed or claimed.",
+      highlights: [
+        "Uses a vehicle registration number as the lookup input.",
+        "Designed to present permitted vehicle-registration information, subject to the data source and applicable privacy rules.",
+        "Implementation details, supported fields, and data-source provenance need fuller documentation before the project can be described as verified or production-ready."
+      ],
+      technologies: ["Vehicle registration lookup", "Web application"],
+      status: "Documentation needs expansion",
+      url: "https://github.com/IamZer01-ai/Vehicle-info"
+    },
+    {
       name: "Home Network Scanner",
       category: "Network visibility project",
       description: "A web application described as helping users discover and monitor devices on their own home network or networks they are authorized to manage.",
