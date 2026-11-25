@@ -41,7 +41,7 @@
     });
     document.querySelectorAll("[data-resume-link]").forEach(el => {
       const url = safeURL(site.resumePath);
-      if (url) el.href = url; else el.remove();
+      if (url) el.href = url; else el.closest(".contact-detail")?.remove() || el.remove();
     });
     document.querySelectorAll("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
 
