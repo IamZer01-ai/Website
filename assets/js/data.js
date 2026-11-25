@@ -100,6 +100,26 @@ window.portfolioData = {
       demo: ""
     }
   ],
+  education: [
+    {
+      degree: "B.Tech – Computer Science & Cybersecurity",
+      institution: "Pallavi Engineering College (affiliated to JNTUH)",
+      location: "Hayathnagar, Hyderabad, India",
+      dates: "June 2022 – September 2025"
+    },
+    {
+      degree: "Intermediate",
+      institution: "MJPTBCWREIS – Mahatma Jyotiba Phule Telangana Backward Classes Welfare Residential Educational Institutions Society",
+      location: "Siddipet, Telangana, India",
+      dates: "June 2019 – April 2022"
+    },
+    {
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Green Grove International School",
+      location: "Choutuppal, Telangana, India",
+      dates: "June 2017 – April 2019"
+    }
+  ],
   repositories: [
     {
       name: "IamZer01 Sentinel",
