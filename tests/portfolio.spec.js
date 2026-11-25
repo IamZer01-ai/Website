@@ -16,6 +16,7 @@ test('experience and education pages render their timeline entries', async ({ pa
 });
 
 test('theme toggle changes theme and can be toggled back', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/');
   const toggle = page.locator('[data-theme-toggle]');
   await toggle.click();
