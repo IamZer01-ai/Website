@@ -1,1 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://your-domain.example/</loc></url><url><loc>https://your-domain.example/about.html</loc></url><url><loc>https://your-domain.example/projects.html</loc></url><url><loc>https://your-domain.example/certifications.html</loc></url><url><loc>https://your-domain.example/education.html</loc></url><url><loc>https://your-domain.example/labs.html</loc></url><url><loc>https://your-domain.example/blog.html</loc></url><url><loc>https://your-domain.example/contact.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://iamzer01-ai.github.io/Website/</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/about.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/experience.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/projects.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/education.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/certifications.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/labs.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/blog.html</loc></url>
+  <url><loc>https://iamzer01-ai.github.io/Website/contact.html</loc></url>
+</urlset>
