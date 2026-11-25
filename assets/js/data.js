@@ -120,6 +120,124 @@ window.portfolioData = {
       dates: "June 2017 – April 2019"
     }
   ],
+  repositories: [
+    {
+      name: "IamZer01 Sentinel",
+      category: "SOC engineering lab",
+      description: "A personal SOC lab for event normalization, rule-based detections, alert correlation, and investigation workflows. The repository includes a FastAPI backend, normalized event and incident models, simulation scenarios, storage adapters, monitoring configuration, and a responsive console.",
+      highlights: [
+        "Implements a rule-based detection and alert-correlation workflow with incident models.",
+        "Includes labelled demo fixtures and an optional same-origin alert API; the dashboard is not presented as a live production SOC.",
+        "Documents deployment limitations, credential handling, and the need for authentication and network hardening before exposure."
+      ],
+      technologies: ["Python", "FastAPI", "JavaScript", "Elasticsearch", "Prometheus", "Grafana", "Docker"],
+      status: "Active development",
+      url: "https://github.com/IamZer01-ai/IamZer01-Sentinel"
+    },
+    {
+      name: "Security Lab — SOC Dashboard",
+      category: "Security operations portfolio",
+      description: "A browser-based SOC-themed portfolio and dashboard that organizes security monitoring concepts, analyst workflows, investigation notes, and threat-intelligence documentation.",
+      highlights: [
+        "Provides dashboard, profile, skills, projects, reports, cases, intelligence, and network-analysis sections.",
+        "Uses HTML, CSS, JavaScript, a live clock, and a lightweight animated interface.",
+        "Best understood as a portfolio/demo interface rather than a connected SIEM deployment."
+      ],
+      technologies: ["HTML5", "CSS3", "JavaScript", "Canvas API"],
+      status: "Portfolio project",
+      url: "https://github.com/IamZer01-ai/security-lab"
+    },
+    {
+      name: "Ethical Hacking Learning Lab",
+      category: "Cybersecurity learning repository",
+      description: "A structured learning repository documenting the security assessment lifecycle, lab exercises, technical notes, and reporting practices for authorized environments.",
+      highlights: [
+        "Organizes learning into reconnaissance concepts, scanning and enumeration, vulnerability assessment, controlled validation, and reporting/remediation.",
+        "Documents tools and learning objectives alongside a clear authorized-use disclaimer.",
+        "Emphasizes verification, risk assessment, documentation, and remediation rather than tool output alone."
+      ],
+      technologies: ["Linux", "Nmap", "Wireshark", "Burp Suite Community", "OpenVAS", "OWASP ZAP"],
+      status: "Active learning repository",
+      url: "https://github.com/IamZer01-ai/Ethical-Hacking-Lab"
+    },
+    {
+      name: "Network Engineering Notes",
+      category: "Technical knowledge base",
+      description: "A structured reference covering networking fundamentals, protocols, routing, switching, traffic analysis, troubleshooting, and network security.",
+      highlights: [
+        "Covers OSI and TCP/IP models, IP addressing, subnetting, DNS, DHCP, routing, and switching.",
+        "Includes network monitoring, wireless networking, troubleshooting, automation, and cloud networking topics.",
+        "References tools such as Wireshark, Cisco Packet Tracer, GNS3, and Nmap."
+      ],
+      technologies: ["TCP/IP", "Wireshark", "Cisco Packet Tracer", "GNS3", "Linux networking"],
+      status: "Learning resource",
+      url: "https://github.com/IamZer01-ai/Network-Engineering-Notes"
+    },
+    {
+      name: "Defensive Blue Team Portfolio",
+      category: "Defensive security engineering",
+      description: "A defensive-security repository organized around SOC operations, detection engineering, threat hunting, incident response, digital forensics, threat intelligence, and reproducible synthetic-data labs.",
+      highlights: [
+        "Documents alert triage, event normalization, severity classification, analyst workflows, and incident reporting.",
+        "Organizes detection examples, threat-hunting hypotheses, ATT&CK mappings, and response playbooks.",
+        "Includes synthetic-data lab scenarios and describes CLI workflows for log analysis, IOC extraction, rule validation, and reporting."
+      ],
+      technologies: ["Python", "Sigma", "YARA", "MITRE ATT&CK", "pytest", "Ruff"],
+      status: "Defensive portfolio repository",
+      url: "https://github.com/IamZer01-ai/Defensive-blueteam"
+    },
+    {
+      name: "Cyber-Levelup",
+      category: "Cybersecurity learning platform concept",
+      description: "An architecture and product-planning repository for a gamified cybersecurity learning platform, combining a learning academy, practice labs, progression, quests, achievements, and an AI mentor concept.",
+      highlights: [
+        "Proposes a modular web application, API backend, terminal and challenge engines, and shared packages.",
+        "Outlines learning paths, lab categories, progression mechanics, and future mobile support.",
+        "Currently documented as a proposed architecture and roadmap, not a completed or deployed platform."
+      ],
+      technologies: ["Next.js (planned)", "NestJS (planned)", "React Native (future)", "PostgreSQL (planned)"],
+      status: "Concept / architecture planning",
+      url: "https://github.com/IamZer01-ai/Cyber-levelup"
+    },
+    {
+      name: "Vehicle-info",
+      category: "Vehicle registration lookup",
+      description: "A vehicle-information lookup project intended to accept a registration plate number and retrieve vehicle-related registration details from an authorized data source. The exact fields and data provider should be documented; private owner contact details and home addresses are not exposed or claimed.",
+      highlights: [
+        "Uses a vehicle registration number as the lookup input.",
+        "Designed to present permitted vehicle-registration information, subject to the data source and applicable privacy rules.",
+        "Implementation details, supported fields, and data-source provenance need fuller documentation before the project can be described as verified or production-ready."
+      ],
+      technologies: ["Vehicle registration lookup", "Web application"],
+      status: "Documentation needs expansion",
+      url: "https://github.com/IamZer01-ai/Vehicle-info"
+    },
+    {
+      name: "Home Network Scanner",
+      category: "Network visibility project",
+      description: "A web application described as helping users discover and monitor devices on their own home network or networks they are authorized to manage.",
+      highlights: [
+        "The repository README currently provides only a short project description; implementation details and supported discovery methods need fuller documentation.",
+        "Presented here as a project overview, not as a verified production-ready scanner."
+      ],
+      technologies: ["Network discovery", "Device inventory", "Web application"],
+      status: "Documentation needs expansion",
+      url: "https://github.com/IamZer01-ai/Home-Network-Scanner"
+    },
+    {
+      name: "HACKer RoadMAPS",
+      category: "Curated learning roadmap",
+      description: "A cybersecurity learning map that organizes foundations, networking and Linux, SOC and blue-team concepts, ethical VAPT, digital forensics, secure development, and career preparation into progressive tracks.",
+      highlights: [
+        "Provides a suggested learning order and role-oriented tracks for building fundamentals before specialization.",
+        "Connects learning topics with practical projects and external reference repositories.",
+        "Identifies external resources and their original authors rather than presenting third-party material as original work."
+      ],
+      technologies: ["Cybersecurity fundamentals", "Networking", "Linux", "SOC", "VAPT", "Digital forensics"],
+      status: "Curated resource",
+      url: "https://github.com/IamZer01-ai/HACKer-RoadMAPS"
+    }
+  ],
   certifications: [],
   labs: [],
   blog: [],
