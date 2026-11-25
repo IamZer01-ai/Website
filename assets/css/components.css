@@ -3,3 +3,18 @@
 .project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}.skill-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding:1.2rem;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(rgba(8,13,22,.75),rgba(8,13,22,.86)),url('../images/cyber-pic.jpg') center/cover}.project-card,.skill-group,.info-card{min-width:0;padding:1.5rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);transition:transform var(--transition),border-color var(--transition)}.project-card:hover,.skill-group:hover,.info-card:hover{transform:translateY(-3px);border-color:var(--accent)}.project-card{display:flex;flex-direction:column;gap:.6rem}.project-card p{color:var(--muted)}.project-card-top{display:flex;justify-content:space-between;gap:1rem;color:var(--accent);font: .78rem var(--font-mono)}.project-number{color:var(--accent)}.project-card .muted{font-size:.92rem}.card-actions{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:auto;padding-top:.7rem}.skill-group h3{font-size:1.05rem}.skill-group ul{list-style:none;padding:0;margin:0}.skill-group li{display:flex;justify-content:space-between;gap:.6rem;border-top:1px solid var(--line);padding:.6rem 0;font-size:.9rem}.skill-level{color:var(--accent);font:.7rem var(--font-mono);text-align:right}.info-card h2{font-size:1.5rem}.info-card p{color:var(--muted)}.timeline{border-left:2px solid var(--line);padding-left:1.5rem}.timeline-item{position:relative;padding:.25rem 0 2rem}.timeline-marker{position:absolute;width:12px;height:12px;background:var(--accent);border-radius:50%;left:-1.95rem;top:.45rem}
 textarea,input,select{max-width:100%;background:var(--surface-2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:.75rem}.cursor-dot,.cursor-outline{display:none}
 @media(pointer:fine){.cursor-dot,.cursor-outline{display:none!important}body,a,button,input,textarea{cursor:auto!important}}
+
+/* Portfolio sections */
+.project-highlights{margin:.1rem 0 .35rem;padding-left:1.2rem;color:var(--muted);font-size:.9rem}
+.project-highlights li+li{margin-top:.35rem}
+.timeline-meta{color:var(--muted)}
+.timeline-item>ul{margin:.65rem 0 0;padding-left:1.2rem;color:var(--muted)}
+.timeline-item>ul li+li{margin-top:.4rem}
+.contact-list{max-width:760px;display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.contact-detail{display:grid;grid-template-columns:minmax(120px,.35fr) 1fr;gap:1rem;padding:1.1rem 1.35rem;border-bottom:1px solid var(--line)}
+.contact-detail:last-child{border-bottom:0}
+.contact-detail>span:first-child{color:var(--muted);font-weight:700}
+.contact-detail a{overflow-wrap:anywhere}
+.skill-group ul{list-style:none;padding:0;margin:0}
+.skill-group li{border-top:1px solid var(--line);padding:.5rem 0;color:var(--muted);font-size:.9rem}
+@media(max-width:620px){.contact-detail{grid-template-columns:1fr;gap:.25rem}}
